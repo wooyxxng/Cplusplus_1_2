@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class CellPhone
+{
+	bool on;
+	string number;
+	string model;
+	string color;
+
+public:
+	void setCellPhone(string n = "", string m = "", string c = "", bool on = false)
+	{
+		number = n;
+		model = m;
+		color = c;
+		this->on = on;
+	}
+	void setOn()
+	{
+		if (on == false)
+			on = true;
+		else
+			on = false;
+	}
+	void print()
+	{
+		cout << number << "\n"
+			<< model << "\n"
+			<< color << "\n"
+			<< on << endl;
+	}
+};
+
+int main()
+{
+	CellPhone CellPhone;
+
+	cout << "CellPhone1:" << endl;
+
+	CellPhone.setCellPhone("010-1234-5678", "Galxay", "Black", false);
+	CellPhone.setOn();
+	CellPhone.print();
+
+	return 0;
+}
